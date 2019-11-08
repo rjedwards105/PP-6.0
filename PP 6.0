@@ -1,16 +1,27 @@
 import java.util.Scanner;
-public class array
+public class arrays
 {
+    final static int LIMIT = 5;
+    final static int MULTIPLE = 10;
     public static void main(String args[])
     {
-        Scanner keyboard = new Scanner(System.in);
-        for (int i = 0; i < 5; i++) 
+
+
+        int[] list = new int[LIMIT];
+
+        for (int index = 0; index < LIMIT; index++)
         {
-            System.out.println("I'm thinking of a number between 1 and 100, can you guess it?: ");
-            int num;
-            int[] set = new int[5];
-            num = keyboard.nextInt();
-            System.out.println(set);
+            Scanner keyboard = new Scanner(System.in);
+            System.out.println("Enter a number: ");
+            int value;
+            value = keyboard.nextInt();
+            list[index] = value;
         }
+        
+        for (int index = 0; index < LIMIT; index++)
+        {
+            System.out.print (list[index] + "\t");
+        }
+        System.out.println();
     }
 }
